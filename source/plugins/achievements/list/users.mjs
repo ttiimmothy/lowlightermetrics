@@ -4,7 +4,7 @@ export default async function({list, login, data, computed, imports, graphql, qu
   const {user} = await graphql(queries.achievements({login}))
   const scores = {followers: user.followers.totalCount, created: user.repositories.totalCount, stars: user.popular.nodes?.[0]?.stargazers?.totalCount ?? 0, forks: Math.max(0, ...data.user.repositories.nodes.map(({forkCount}) => forkCount))}
   const ranks = await graphql(queries.achievements.ranking(scores))
-  const requirements = {stars: 1, followers: 3, forks: 1, created: 1}
+  const requirements = {stars: 1, followers: 3, forks: 0, created: 1}
 
   //Developer
   {
