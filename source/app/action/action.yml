@@ -11,12 +11,12 @@ inputs:
 
 # ====================================================================================
 # Action metadata
-name: Metrics embed
+name: Metrics embed from @actionhooks
 author: actionhooks
-description: An infographics generator with 40+ plugins and 300+ options to display stats about your GitHub account!
+description: An infographics generator with 40+ plugins and 300+ options to display stats about your GitHub account
 branding:
-  icon: user-check
-  color: gray-dark
+  icon: box
+  color: black
 
 # The action will parse its name to check if it's the official action or if it's a forked one
 # On the official action, it'll use the docker image published on GitHub registry when using a released version, allowing faster runs
