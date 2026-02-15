@@ -23,5 +23,5 @@ describe("Check file changes (checkout your files if needed)", () => {
 
 //Template changes
 describe("Check template changes", () => {
-  test("Use community templates instead (see https://github.com/gh-metrics/metrics/tree/master/source/templates/community)", async () => void expect((await diff()).filter(edited => /^sources[/]templates[/]/.test(edited) && /^source[/]templates[/](?:classic|terminal|markdown|repository|community)[/][\s\S]*$/.test(edited)).length).toBe(0))
+  test("Use community templates instead (see https://github.com/actionhooks/lowlightermetrics/tree/master/source/templates/community)", async () => void expect((await diff()).filter(edited => /^sources[/]templates[/]/.test(edited) && /^source[/]templates[/](?:classic|terminal|markdown|repository|community)[/][\s\S]*$/.test(edited)).length).toBe(0))
 })

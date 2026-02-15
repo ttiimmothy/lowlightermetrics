@@ -15,7 +15,7 @@ action.input = vars => Object.fromEntries([...Object.entries(action.defaults), .
 action.run = async vars =>
   await new Promise((solve, reject) => {
     let [stdout, stderr] = ["", ""]
-    const env = {...process.env, ...action.input(vars), GITHUB_REPOSITORY: "gh-metrics/metrics"}
+    const env = {...process.env, ...action.input(vars), GITHUB_REPOSITORY: "actionhooks/lowlightermetrics"}
     const child = processes.spawn("node", ["source/app/action/index.mjs"], {env})
     child.stdout.on("data", data => stdout += data)
     child.stderr.on("data", data => stderr += data)
@@ -29,7 +29,7 @@ action.run = async vars =>
 
 //Web instance
 const web = {}
-web.run = async vars => (await axios.get(`http://localhost:3000/gh-metrics?${new url.URLSearchParams(Object.fromEntries(Object.entries(vars).map(([key, value]) => [key.replace(/^plugin_/, "").replace(/_/g, "."), value])))}`)).status === 200
+web.run = async vars => (await axios.get(`http://localhost:3000/actionhooks?${new url.URLSearchParams(Object.fromEntries(Object.entries(vars).map(([key, value]) => [key.replace(/^plugin_/, "").replace(/_/g, "."), value])))}`)).status === 200
 web.start = async () =>
   new Promise(solve => {
     let stdout = ""
@@ -62,8 +62,8 @@ placeholder.run = async vars => {
     plugins: {enabled: {...enabled, base}, options},
     config,
     version: "TEST",
-    user: "gh-metrics",
-    avatar: "https://github.com/gh-metrics.png",
+    user: "actionhooks",
+    avatar: "https://github.com/actionhooks.png",
   }) === "string"
 }
 

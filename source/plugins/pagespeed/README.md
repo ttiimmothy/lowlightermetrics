@@ -20,9 +20,9 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>PageSpeed scores</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.pagespeed.svg" alt=""></img></details>
-      <details><summary>PageSpeed scores with detailed report</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.pagespeed.detailed.svg" alt=""></img></details>
-      <details><summary>PageSpeed scores with a website screenshot</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.pagespeed.screenshot.svg" alt=""></img></details>
+      <details open><summary>PageSpeed scores</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.pagespeed.svg" alt=""></img></details>
+      <details><summary>PageSpeed scores with detailed report</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.pagespeed.detailed.svg" alt=""></img></details>
+      <details><summary>PageSpeed scores with a website screenshot</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.pagespeed.screenshot.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -128,7 +128,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Succinct report
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.pagespeed.svg
   token: NOT_NEEDED
@@ -140,7 +140,7 @@ with:
 ```
 ```yaml
 name: Detailed report
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.pagespeed.detailed.svg
   token: NOT_NEEDED
@@ -153,7 +153,7 @@ with:
 ```
 ```yaml
 name: Screenshot
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.pagespeed.screenshot.svg
   token: NOT_NEEDED
@@ -166,7 +166,7 @@ with:
 ```
 ```yaml
 name: Succinct report with PWA
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.pagespeed.svg
   token: NOT_NEEDED

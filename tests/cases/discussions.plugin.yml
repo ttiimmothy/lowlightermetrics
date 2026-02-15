@@ -1,5 +1,5 @@
 - name: 💬 Discussions - GitHub Discussions
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     token: MOCKED_TOKEN
     plugin_discussions: 'yes'

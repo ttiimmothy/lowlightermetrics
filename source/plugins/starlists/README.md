@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Repositories from star lists</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.starlists.svg" alt=""></img></details>
-      <details open><summary>Languages from star lists</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.starlists.languages.svg" alt=""></img></details>
+      <details open><summary>Repositories from star lists</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.starlists.svg" alt=""></img></details>
+      <details open><summary>Languages from star lists</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.starlists.languages.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -168,7 +168,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Featured star list
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.starlists.svg
   token: NOT_NEEDED
@@ -180,7 +180,7 @@ with:
 ```
 ```yaml
 name: Featured star list languages
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.starlists.languages.svg
   token: NOT_NEEDED

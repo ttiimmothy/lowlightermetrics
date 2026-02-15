@@ -8,7 +8,7 @@ permissions: {}
 jobs:
   examples:
     runs-on: ubuntu-latest
-    if: github.repository == 'gh-metrics/metrics'
+    if: github.repository == 'actionhooks/lowlightermetrics'
     permissions:
       contents: write
     steps:

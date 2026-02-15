@@ -1,5 +1,5 @@
 - name: News from hackernews
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     filename: metrics.plugin.rss.svg
     token: NOT_NEEDED

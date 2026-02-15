@@ -1,14 +1,14 @@
 - name: Featured repositories
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     filename: metrics.plugin.repositories.svg
     token: ${{ secrets.METRICS_TOKEN }}
     base: ""
     plugin_repositories: yes
-    plugin_repositories_featured: gh-metrics/metrics
+    plugin_repositories_featured: actionhooks/lowlightermetrics
 
 - name: Pinned repositories
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     filename: metrics.plugin.repositories.pinned.svg
     token: ${{ secrets.METRICS_TOKEN }}

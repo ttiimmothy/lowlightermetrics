@@ -1,5 +1,5 @@
 - name: MBTI Personality profile
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     filename: metrics.plugin.16personalities.svg
     token: ${{ secrets.METRICS_TOKEN }}

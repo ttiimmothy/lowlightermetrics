@@ -1,13 +1,13 @@
 - name: 📓 Featured repositories - Featured repositories
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     token: MOCKED_TOKEN
     plugin_repositories: 'yes'
-    plugin_repositories_featured: gh-metrics/metrics
+    plugin_repositories_featured: actionhooks/lowlightermetrics
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 📓 Featured repositories - Pinned repositories
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     token: MOCKED_TOKEN
     plugin_repositories: 'yes'

@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>GitHub sponsors card</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.sponsors.svg" alt=""></img></details>
-      <details><summary>GitHub sponsors full introduction</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.sponsors.full.svg" alt=""></img></details>
+      <details open><summary>GitHub sponsors card</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.sponsors.svg" alt=""></img></details>
+      <details><summary>GitHub sponsors full introduction</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.sponsors.full.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -111,7 +111,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Sponsors goal
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.sponsors.svg
   token: ${{ secrets.METRICS_TOKEN_PERSONAL }}
@@ -123,7 +123,7 @@ with:
 ```
 ```yaml
 name: Sponsors introduction
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.sponsors.full.svg
   token: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}

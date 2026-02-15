@@ -1,5 +1,5 @@
 - name: GitHub Community Support
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     filename: metrics.plugin.support.svg
     token: NOT_NEEDED

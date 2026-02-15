@@ -5,7 +5,7 @@ export default function({faker, query, login = faker.internet.userName()}) {
     user: {
       repositories: {
         nodes: [
-          {nameWithOwner: "gh-metrics/metrics"},
+          {nameWithOwner: "actionhooks/lowlightermetrics"},
         ],
       },
     },

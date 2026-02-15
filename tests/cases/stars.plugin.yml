@@ -1,5 +1,5 @@
 - name: 🌟 Recently starred repositories - Recently starred
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     token: MOCKED_TOKEN
     plugin_stars: 'yes'
