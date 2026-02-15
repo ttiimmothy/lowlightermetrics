@@ -1494,12 +1494,9 @@ inputs:
 
 # ====================================================================================
 # Action metadata
-name: Metrics embed
-author: gh-metrics
-description: An infographics generator with 40+ plugins and 300+ options to display stats about your GitHub account!
-branding:
-  icon: user-check
-  color: gray-dark
+name: Metrics embed from @ttiimmothy
+author: ttiimmothy
+description: An infographics generator with 40+ plugins and 300+ options to display stats about your GitHub account
 
 # The action will parse its name to check if it's the official action or if it's a forked one
 # On the official action, it'll use the docker image published on GitHub registry when using a released version, allowing faster runs
