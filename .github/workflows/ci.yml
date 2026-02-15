@@ -114,7 +114,7 @@ jobs:
           fi
       - name: Tag docker image (master) and publish to GitHub registry
         run: |
-          docker push ghcr.io/actionhooks/lowlightermetrics:main
+          docker push ghcr.io/actionhooks/lowlightermetrics:master
 
   # Deploy to beta-metrics.lecoq.io
   deploy-master:
