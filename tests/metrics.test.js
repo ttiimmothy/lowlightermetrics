@@ -113,7 +113,7 @@ describe("GitHub Action", () =>
   describe.each([
     ["classic", {}],
     ["terminal", {}],
-    ["repository", {repo: "metrics"}],
+    ["repository", {repo: "lowlightermetrics"}],
   ])("Template : %s", (template, query) => {
     for (const [name, input, {skip = [], modes = [], timeout} = {}] of tests) {
       if ((skip.includes(template)) || ((modes.length) && (!modes.includes("action"))))
@@ -127,7 +127,7 @@ describe("Web instance", () =>
   describe.each([
     ["classic", {}],
     ["terminal", {}],
-    ["repository", {repo: "metrics"}],
+    ["repository", {repo: "lowlightermetrics"}],
   ])("Template : %s", (template, query) => {
     for (const [name, input, {skip = [], modes = [], timeout} = {}] of tests) {
       if ((skip.includes(template)) || ((modes.length) && (!modes.includes("web"))))
