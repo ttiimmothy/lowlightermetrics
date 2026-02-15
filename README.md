@@ -1,1 +1,1 @@
-Presets from [lowlighter/metrics](https://github.com/lowlighter/metrics)!
+Presets from [actionhooks/lowlightermetrics](https://github.com/actionhooks/lowlightermetrics)!
