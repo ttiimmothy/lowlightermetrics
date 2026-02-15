@@ -96,8 +96,7 @@ export default async function({login, q}, {conf, data, rest, graphql, plugins, q
       if (spdx) {
         computed.licenses.used[spdx] = (computed.licenses.used[spdx] ?? 0) + 1
         computed.licenses.about[spdx] = lic
-      }
-      else {
+      } else {
         computed.licenses.used.UNKNOWN = (computed.licenses.used.UNKNOWN ?? 0) + 1
         computed.licenses.about.UNKNOWN = lic
       }
