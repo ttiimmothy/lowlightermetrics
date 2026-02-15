@@ -68,10 +68,13 @@ export class RecentAnalyzer extends Analyzer {
         commits
           .flatMap(({payload}) => payload?.commits ?? [])
           .filter((commit) => {
-            if (!commit) return false;
-            const {committer} = commit;
-            return filters.text(committer?.email, this.authoring, {debug: false});
+            if (!commit) {
+              return false
+            }
+            const {committer} = commit
+            return filters.text(committer?.email, this.authoring, {debug: false})
           })
+          // .filter(({committer}) => filters.text(committer?.email, this.authoring, {debug: false}))
           .map(commit => commit.url)
           .map(async commit => (await this.rest.request(commit)).data),
       ),
