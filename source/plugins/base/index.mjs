@@ -221,37 +221,33 @@ const postprocess = {
   user({login, data}) {
     console.debug(`metrics/compute/${login}/base > applying postprocessing`)
     data.account = "user"
-    Object.assign(data.user, {
-      isHireable: false,
-      isVerified: false,
-      repositories: {},
-      contributionsCollection: {},
-    })
+    data.user.isHireable = data.user.isHireable ?? false
+    data.user.isVerified = data.user.isVerified ?? false
+    data.user.repositories = data.user.repositories ?? {}
+    data.user.contributionsCollection = data.user.contributionsCollection ?? {}
   },
   //Organization
   organization({login, data}) {
     console.debug(`metrics/compute/${login}/base > applying postprocessing`)
     data.account = "organization"
-    Object.assign(data.user, {
-      isHireable: false,
-      repositories: {},
-      starredRepositories: {totalCount: NaN},
-      watching: {totalCount: NaN},
-      contributionsCollection: {
-        totalRepositoriesWithContributedCommits: NaN,
-        totalCommitContributions: NaN,
-        restrictedContributionsCount: NaN,
-        totalIssueContributions: NaN,
-        totalPullRequestContributions: NaN,
-        totalPullRequestReviewContributions: NaN,
-      },
-      calendar: {contributionCalendar: {weeks: []}},
-      repositoriesContributedTo: {totalCount: NaN, nodes: []},
-      followers: {totalCount: NaN},
-      following: {totalCount: NaN},
-      issueComments: {totalCount: NaN},
-      organizations: {totalCount: NaN},
-    })
+    data.user.isHireable = data.user.isHireable ?? false
+    data.user.repositories = data.user.repositories ?? {}
+    data.user.starredRepositories = data.user.starredRepositories ?? {totalCount: NaN}
+    data.user.watching = data.user.watching ?? {totalCount: NaN}
+    data.user.contributionsCollection = data.user.contributionsCollection ?? {
+      totalRepositoriesWithContributedCommits: NaN,
+      totalCommitContributions: NaN,
+      restrictedContributionsCount: NaN,
+      totalIssueContributions: NaN,
+      totalPullRequestContributions: NaN,
+      totalPullRequestReviewContributions: NaN,
+    }
+    data.user.calendar = data.user.calendar ?? {contributionCalendar: {weeks: []}}
+    data.user.repositoriesContributedTo = data.user.repositoriesContributedTo ?? {totalCount: NaN, nodes: []}
+    data.user.followers = data.user.followers ?? {totalCount: NaN}
+    data.user.following = data.user.following ?? {totalCount: NaN}
+    data.user.issueComments = data.user.issueComments ?? {totalCount: NaN}
+    data.user.organizations = data.user.organizations ?? {totalCount: NaN}
   },
   //Skip base content query and instantiate an empty user instance
   skip({login, data, imports}) {

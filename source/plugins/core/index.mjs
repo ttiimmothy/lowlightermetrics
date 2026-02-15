@@ -86,21 +86,30 @@ export default async function({login, q}, {conf, data, rest, graphql, plugins, q
     for (const property of ["watchers", "stargazers", "issues_open", "issues_closed", "pr_open", "pr_closed", "pr_merged", "releases", "deployments", "environments"])
       computed.repositories[property] += repository[property]?.totalCount ?? 0
     //Forks
-    computed.repositories.forks += repository.forkCount
+    computed.repositories.forks += repository.forkCount ?? 0
     if (repository.isFork)
       computed.repositories.forked++
-    //License
-    if (repository.licenseInfo) {
-      computed.licenses.used[repository.licenseInfo.spdxId] = (computed.licenses.used[repository.licenseInfo.spdxId] ?? 0) + 1
-      computed.licenses.about[repository.licenseInfo.spdxId] = repository.licenseInfo
+    //License (use a stable key and guard missing SPDX)
+    const lic = repository.licenseInfo
+    if (lic) {
+      const spdx = lic.spdxId ?? lic.key ?? lic.name ?? null
+      if (spdx) {
+        computed.licenses.used[spdx] = (computed.licenses.used[spdx] ?? 0) + 1
+        computed.licenses.about[spdx] = lic
+      }
+      else {
+        computed.licenses.used.UNKNOWN = (computed.licenses.used.UNKNOWN ?? 0) + 1
+        computed.licenses.about.UNKNOWN = lic
+      }
     }
   }
 
   //Total disk usage
   computed.diskUsage = `${imports.format.bytes(data.user.repositories.totalDiskUsage * 1000)}`
 
-  //Compute licenses stats
-  computed.licenses.favorite = Object.entries(computed.licenses.used).sort(([_an, a], [_bn, b]) => b - a).slice(0, 1).map(([name, _value]) => name) ?? ""
+  //Compute licenses stats (single string key)
+  const favoriteEntry = Object.entries(computed.licenses.used).sort(([_a, a], [_b, b]) => b - a)[0]
+  computed.licenses.favorite = favoriteEntry ? favoriteEntry[0] : ""
 
   //Compute total commits
   computed.commits += data.user.contributionsCollection.totalCommitContributions + data.user.contributionsCollection.restrictedContributionsCount
