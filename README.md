@@ -1,5 +1,6 @@
-# 📊 Lowlightermetrics 
-<!-- [<img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=280144&theme=dark" alt="" align="right" width="190" height="41">](https://www.producthunt.com/posts/github-metrics?utm_source=badge-featured&utm_medium=badge&utm_source=badge-github-metrics) -->
+# 📊 Metrics [<img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=280144&theme=dark" alt="" align="right" width="190" height="41">](https://www.producthunt.com/posts/github-metrics?utm_source=badge-featured&utm_medium=badge&utm_source=badge-github-metrics)
+
+This is a maintenance fork of Simon Lecoq's fantastic [lowlighter/metrics](https://github.com/lowlighter/metrics/issues) project.
 
 [![Continuous integration](https://github.com/actionhooks/lowlightermetrics/actions/workflows/ci.yml/badge.svg)](https://github.com/actionhooks/lowlightermetrics/actions/workflows/ci.yml)
 
@@ -446,8 +447,6 @@ Generate metrics that can be embedded everywhere, including your GitHub profile 
 
 # 📚 Documentation
 
-
-> <sup>*⚠️ This is the documentation of **v3.35-beta** (`@master`/`@main` branches) which includes [unreleased features](https://github.com/actionhooks/lowlightermetrics/compare/latest...master) planned for next release. See documentation for current released version [**v3.34** (`@latest` branch) here](https://github.com/actionhooks/lowlightermetrics/blob/latest/README.md).* </sup>
 
 
 
