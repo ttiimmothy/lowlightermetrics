@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.rss.svg" alt=""></img>
+      <img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.rss.svg" alt=""></img>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -74,7 +74,7 @@
 <!--examples-->
 ```yaml
 name: News from hackernews
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.rss.svg
   token: NOT_NEEDED

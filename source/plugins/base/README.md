@@ -16,10 +16,10 @@
   <tr>
 <td colspan="2"><table><tr>
 <td align="center">
-<img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.classic.svg" alt=""></img>
+<img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.classic.svg" alt=""></img>
 </td>
 <td align="center">
-<img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.organization.svg" alt=""></img>
+<img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.organization.svg" alt=""></img>
 </td>
 </tr></table></td>
   </tr>
@@ -216,7 +216,7 @@ Broad affiliations will result in less representative metrics.</p>
 <!--examples-->
 ```yaml
 name: Default metrics
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.base.svg
   token: ${{ secrets.METRICS_TOKEN }}

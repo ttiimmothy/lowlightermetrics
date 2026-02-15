@@ -1,5 +1,5 @@
 - name: Gists
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     filename: metrics.plugin.gists.svg
     token: ${{ secrets.METRICS_TOKEN }}

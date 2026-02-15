@@ -21,7 +21,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           YAML_CONTENT=$(cat .github/workflows/sync.yml)
-          git remote add upstream https://github.com/gh-metrics/metrics.git
+          git remote add upstream https://github.com/actionhooks/lowlightermetrics.git
           git fetch upstream
           git reset --hard upstream/master
           git push origin master --force

@@ -1,5 +1,5 @@
 - name: 💝 GitHub Sponsorships
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     filename: metrics.plugin.sponsorships.svg
     token: ${{ secrets.METRICS_TOKEN_PERSONAL }}

@@ -102,7 +102,7 @@ This token will not expire and it will be able to access only public details.
 
 <!--examples-->
 ```yaml
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   token: NOT_NEEDED
   plugin_poopmap_token: ${{ secrets.POOPMAP_TOKEN }}

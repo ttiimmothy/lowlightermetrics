@@ -31,10 +31,10 @@ export default function({faker, url, options, login = faker.internet.userName()}
               created_at: `${faker.date.recent()}`,
               entities: {
                 mentions: [
-                  {start: 22, end: 33, username: "gh-metrics"},
+                  {start: 22, end: 33, username: "actionhooks"},
                 ],
               },
-              text: "Checkout metrics from @gh-metrics ! #GitHub",
+              text: "Checkout metrics from @actionhooks ! #GitHub",
             },
             {
               id: faker.number.int(100000000000000).toString(),
@@ -46,8 +46,8 @@ export default function({faker, url, options, login = faker.internet.userName()}
             users: [
               {
                 id: faker.number.int(100000000000000).toString(),
-                name: "gh-metrics",
-                username: "gh-metrics",
+                name: "actionhooks",
+                username: "actionhooks",
               },
             ],
           },

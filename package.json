@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gh-metrics/metrics.git"
+    "url": "git+https://github.com/actionhooks/lowlightermetrics.git"
   },
-  "author": "gh-metrics",
+  "author": "actionhooks",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gh-metrics/metrics/issues"
+    "url": "https://github.com/actionhooks/lowlightermetrics/issues"
   },
-  "homepage": "https://github.com/gh-metrics/metrics#readme",
+  "homepage": "https://github.com/actionhooks/lowlightermetrics#readme",
   "dependencies": {
     "@actions/core": "^1.10.1",
     "@actions/github": "^5.1.1",

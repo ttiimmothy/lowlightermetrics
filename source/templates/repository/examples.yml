@@ -1,12 +1,12 @@
 - name: Example
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     template: repository
     filename: metrics.repository.svg
     token: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
-    user: gh-metrics
+    user: actionhooks
     repo: metrics
     plugin_lines: yes
     plugin_followup: yes
     plugin_projects: yes
-    plugin_projects_repositories: gh-metrics/metrics/projects/1
+    plugin_projects_repositories: actionhooks/lowlightermetrics/projects/1

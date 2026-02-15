@@ -1,12 +1,12 @@
 - name: 🎩 Notable contributions - Contributions
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     token: MOCKED_TOKEN
     plugin_notable: 'yes'
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 🎩 Notable contributions - Indepth analysis
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     token: MOCKED_TOKEN
     plugin_notable: 'yes'

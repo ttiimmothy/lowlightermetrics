@@ -19,8 +19,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>Repositories and diff history</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.lines.history.svg" alt=""></img></details>
-      <details><summary>Compact display in base plugin</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.lines.svg" alt=""></img></details>
+      <details open><summary>Repositories and diff history</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.lines.history.svg" alt=""></img></details>
+      <details><summary>Compact display in base plugin</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.lines.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -130,7 +130,7 @@ after returning correct results upon performing another query.</p>
 <!--examples-->
 ```yaml
 name: Compact display in base plugin
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.lines.svg
   token: ${{ secrets.METRICS_TOKEN }}
@@ -141,7 +141,7 @@ with:
 ```
 ```yaml
 name: Repositories and diff history
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.lines.history.svg
   token: ${{ secrets.METRICS_TOKEN }}
@@ -154,7 +154,7 @@ with:
   repositories_skipped: |
     @use.patterns
     */*
-    +gh-metrics/metrics
+    +actionhooks/lowlightermetrics
 
 ```
 <!--/examples-->

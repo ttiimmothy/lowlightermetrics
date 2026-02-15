@@ -20,8 +20,8 @@ All product and company names are trademarks™ or registered® trademarks of th
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <details open><summary>For a user or an organization</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.introduction.svg" alt=""></img></details>
-      <details><summary>For a repository</summary><img src="https://github.com/gh-metrics/metrics/blob/examples/metrics.plugin.introduction.repository.svg" alt=""></img></details>
+      <details open><summary>For a user or an organization</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.introduction.svg" alt=""></img></details>
+      <details><summary>For a repository</summary><img src="https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.plugin.introduction.repository.svg" alt=""></img></details>
       <img width="900" height="1" alt="">
     </td>
   </tr>
@@ -65,7 +65,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <!--examples-->
 ```yaml
 name: Organization introduction
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.introduction.svg
   token: ${{ secrets.METRICS_TOKEN }}
@@ -76,7 +76,7 @@ with:
 ```
 ```yaml
 name: Repository introduction
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   filename: metrics.plugin.introduction.repository.svg
   token: ${{ secrets.METRICS_TOKEN }}

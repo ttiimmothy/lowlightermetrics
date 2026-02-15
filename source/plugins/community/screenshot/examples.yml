@@ -1,5 +1,5 @@
 - name: XKCD of the day
-  uses: gh-metrics/metrics@latest
+  uses: actionhooks/lowlightermetrics@latest
   with:
     filename: metrics.plugin.screenshot.svg
     token: NOT_NEEDED

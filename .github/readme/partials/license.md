@@ -3,7 +3,7 @@
 ```
 MIT License
 Copyright (c) 2020-present lowlighter
-Copyright (c) 2025-present gh-metrics
+Copyright (c) 2025-present actionhooks
 ```
 
-![Sponsors](https://github.com/gh-metrics/metrics/blob/examples/metrics.sponsors.svg)
+![Sponsors](https://github.com/actionhooks/lowlightermetrics/blob/examples/metrics.sponsors.svg)

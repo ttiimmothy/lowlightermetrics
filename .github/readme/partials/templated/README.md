@@ -2,7 +2,7 @@
 
 This is a maintenance fork of Simon Lecoq's fantastic [lowlighter/metrics](https://github.com/lowlighter/metrics/issues) project.
 
-[![Continuous integration](https://github.com/gh-metrics/metrics/actions/workflows/ci.yml/badge.svg)](https://github.com/gh-metrics/metrics/actions/workflows/ci.yml)
+[![Continuous integration](https://github.com/actionhooks/lowlightermetrics/actions/workflows/ci.yml/badge.svg)](https://github.com/actionhooks/lowlightermetrics/actions/workflows/ci.yml)
 
 <% for (const partial of ["templated/introduction", "templated/documentation", "license"]) { -%>
 <%- await include(`/partials/${partial}.md`) %>

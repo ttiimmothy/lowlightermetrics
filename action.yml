@@ -220,7 +220,7 @@ inputs:
   use_prebuilt_image:
     description: >-
       Use pre-built docker image from [GitHub container
-      registry](https://github.com/gh-metrics/metrics/pkgs/container/metrics)
+      registry](https://github.com/actionhooks/lowlightermetrics/pkgs/container/metrics)
     default: yes
 
   plugins_errors_fatal:
@@ -1494,12 +1494,12 @@ inputs:
 
 # ====================================================================================
 # Action metadata
-name: Metrics embed
-author: gh-metrics
-description: An infographics generator with 40+ plugins and 300+ options to display stats about your GitHub account!
+name: Metrics embed from @ttiimmothy
+author: ttiimmothy
+description: An infographics generator with 40+ plugins and 300+ options to display stats about your GitHub account
 branding:
-  icon: user-check
-  color: gray-dark
+  icon: box
+  color: black
 
 # The action will parse its name to check if it's the official action or if it's a forked one
 # On the official action, it'll use the docker image published on GitHub registry when using a released version, allowing faster runs
@@ -1552,7 +1552,7 @@ runs:
 
         # Image name
         # Official action
-        if [[ $METRICS_SOURCE == "gh-metrics" ]]; then
+        if [[ $METRICS_SOURCE == "actionhooks" ]]; then
           # Use registry with pre-built images
           if [[ ! $METRICS_USE_PREBUILT_IMAGE =~ ^([Ff]alse|[Oo]ff|[Nn]o|0)$ ]]; then
             # Is released version
@@ -1564,7 +1564,7 @@ runs:
               METRICS_TAG="$METRICS_TAG-beta"
               echo "Image tag (updated): $METRICS_TAG"
             fi
-            METRICS_IMAGE=ghcr.io/gh-metrics/metrics:$METRICS_TAG
+            METRICS_IMAGE=ghcr.io/actionhooks/lowlightermetrics:$METRICS_TAG
             echo "Using pre-built version $METRICS_TAG, will pull docker image from GitHub registry"
             if ! docker image pull $METRICS_IMAGE; then
               echo "Failed to fetch docker image from GitHub registry, will rebuild it locally"

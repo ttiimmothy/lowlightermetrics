@@ -134,7 +134,7 @@ Check out the instructions there.
 
 <!--examples-->
 ```yaml
-uses: gh-metrics/metrics@latest
+uses: actionhooks/lowlightermetrics@latest
 with:
   token: NOT_NEEDED
   plugin_nightscout: yes
