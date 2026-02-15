@@ -32,7 +32,6 @@ datapoints
 dded
 dependabot
 deployer
-dessant
 destructuring
 Dexcom
 dflag
@@ -306,7 +305,6 @@ ytmusic
 Zabcdefghijklmnopqrstuvwxyz
 zenhei
 zenorocha
-ttiimmothy
 actionhooks
 lowlightermetrics
 lic
