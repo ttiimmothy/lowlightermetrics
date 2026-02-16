@@ -315,14 +315,16 @@ export default async function({list, login, data, computed, imports, graphql, qu
   {
     const value = !/This user hasn't uploaded any GPG keys/i.test((await imports.axios.get(`https://github.com/${login}.gpg`)).data)
     const unlock = null
+    const result = value ? 1 : 0
 
     list.push({
       title: "Verified",
       text: "Registered a GPG key to sign commits",
       icon:
         '<g stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill="none" fill-rule="evenodd"><path d="M46 17.036v13.016c0 4.014-.587 8.94-4.751 13.67-5.787 5.911-12.816 8.279-13.243 8.283-.426.003-7.91-2.639-13.222-8.283C10.718 39.4 10 34.056 10 30.052V17.036a2 2 0 012-2h32a2 2 0 012 2zM16 15c0-6.616 5.384-12 12-12s12 5.384 12 12" stroke="#secondary"/><path d="M21 15c0-3.744 3.141-7 7-7 3.86 0 7 3.256 7 7m4.703 29.63l-3.672-3.647m-17.99-17.869l-7.127-7.081" stroke="#secondary"/><path d="M28 23a8 8 0 110 16 8 8 0 010-16z" stroke="#primary"/><path stroke="#primary" d="M30.966 29.005l-4 3.994-2.002-1.995"/></g>',
-      rank: value ? "$" : "X",
-      progress: value ? 1 : 0,
+      //rank: value ? "$" : "X",
+      ...rank(result, [0, 0, 1, 2, 3]),
+      //progress: value ? 1 : 0,
       value,
       unlock: new Date(unlock?.createdAt),
     })
