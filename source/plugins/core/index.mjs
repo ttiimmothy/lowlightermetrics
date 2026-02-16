@@ -96,7 +96,8 @@ export default async function({login, q}, {conf, data, rest, graphql, plugins, q
       if (spdx) {
         computed.licenses.used[spdx] = (computed.licenses.used[spdx] ?? 0) + 1
         computed.licenses.about[spdx] = lic
-      } else {
+      }
+      else {
         computed.licenses.used.UNKNOWN = (computed.licenses.used.UNKNOWN ?? 0) + 1
         computed.licenses.about.UNKNOWN = lic
       }
@@ -107,8 +108,10 @@ export default async function({login, q}, {conf, data, rest, graphql, plugins, q
   computed.diskUsage = `${imports.format.bytes(data.user.repositories.totalDiskUsage * 1000)}`
 
   //Compute licenses stats (single string key)
-  const favoriteEntry = Object.entries(computed.licenses.used).sort(([_a, a], [_b, b]) => b - a)[0]
-  computed.licenses.favorite = favoriteEntry ? favoriteEntry[0] : ""
+  const entries = Object.entries(computed.licenses.used).sort(([_a, a], [_b, b]) => b - a)
+  const [favoriteEntry = []] = entries
+  const [favorite] = favoriteEntry
+  computed.licenses.favorite = favorite ?? ""
 
   //Compute total commits
   computed.commits += data.user.contributionsCollection.totalCommitContributions + data.user.contributionsCollection.restrictedContributionsCount
