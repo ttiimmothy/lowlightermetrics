@@ -1,7 +1,7 @@
 schema: v1
 name: Lunar red
 description: A simple red themed preset
-author: lowlighter
+author: actionhooks
 with:
   plugin_isocalendar: yes
   plugin_isocalendar_duration: full-year

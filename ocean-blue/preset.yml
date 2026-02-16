@@ -1,7 +1,7 @@
 schema: v1
 name: Ocean blue
 description: A simple blue themed preset
-author: lowlighter
+author: ctionhook
 with:
   plugin_isocalendar: yes
   plugin_isocalendar_duration: full-year
