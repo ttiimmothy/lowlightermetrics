@@ -322,8 +322,8 @@ export default async function({list, login, data, computed, imports, graphql, qu
       text: "Registered a GPG key to sign commits",
       icon:
         '<g stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill="none" fill-rule="evenodd"><path d="M46 17.036v13.016c0 4.014-.587 8.94-4.751 13.67-5.787 5.911-12.816 8.279-13.243 8.283-.426.003-7.91-2.639-13.222-8.283C10.718 39.4 10 34.056 10 30.052V17.036a2 2 0 012-2h32a2 2 0 012 2zM16 15c0-6.616 5.384-12 12-12s12 5.384 12 12" stroke="#secondary"/><path d="M21 15c0-3.744 3.141-7 7-7 3.86 0 7 3.256 7 7m4.703 29.63l-3.672-3.647m-17.99-17.869l-7.127-7.081" stroke="#secondary"/><path d="M28 23a8 8 0 110 16 8 8 0 010-16z" stroke="#primary"/><path stroke="#primary" d="M30.966 29.005l-4 3.994-2.002-1.995"/></g>',
+      ...rank(result, [1, 1, 1, 2, 3]),
       //rank: value ? "$" : "X",
-      ...rank(result, [0, 0, 1, 2, 3]),
       //progress: value ? 1 : 0,
       value,
       unlock: new Date(unlock?.createdAt),
@@ -368,14 +368,16 @@ export default async function({list, login, data, computed, imports, graphql, qu
   {
     const {repository: {viewerHasStarred: value}, viewer: {login: _login}} = await graphql(queries.achievements.metrics())
     const unlock = null
+    const result = ((value) && (login === _login)) ? 1 : 0
 
     list.push({
       title: "Infographile",
       text: "Fervent supporter of metrics",
       icon:
         '<g stroke-linejoin="round" stroke-width="2" fill="none" fill-rule="evenodd"><g stroke="#secondary" stroke-linecap="round"><path d="M22 31h20M22 36h10"/></g><path d="M44.05 36.013a8 8 0 110 16 8 8 0 010-16z" stroke="#primary" stroke-linecap="round"/><path d="M32 43H7c-1.228 0-2-.84-2-2V7c0-1.16.772-2 2-2h7.075M47 24.04V32" stroke="#secondary" stroke-linecap="round"/><path stroke="#primary" stroke-linecap="round" d="M47.015 42.017l-4 3.994-2.001-1.995"/><path stroke="#secondary" d="M11 31h5v5h-5z"/><path d="M11 14a2 2 0 012-2m28 12a2 2 0 01-2 2h-1m-5 0h-4m-6 0h-4m-5 0h-1a2 2 0 01-2-2m0-4v-2" stroke="#secondary" stroke-linecap="round"/><path d="M18 18V7c0-1.246.649-2 1.73-2h28.54C49.351 5 50 5.754 50 7v11c0 1.246-.649 2-1.73 2H19.73c-1.081 0-1.73-.754-1.73-2z" stroke="#primary" stroke-linecap="round"/><path stroke="#primary" stroke-linecap="round" d="M22 13h4l2-3 3 5 2-2h3.052l2.982-4 3.002 4H46"/></g>',
-      rank: (value) && (login === _login) ? "$" : "X",
-      progress: (value) && (login === _login) ? 1 : 0,
+      ...rank(result, [1, 1, 1, 2, 3]),
+      //rank: (value) && (login === _login) ? "$" : "X",
+      //progress: (value) && (login === _login) ? 1 : 0,
       value,
       unlock: new Date(unlock?.createdAt),
     })
