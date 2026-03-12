@@ -19,9 +19,6 @@ jobs:
           fetch-depth: 0
       - name: Setup NodeJS
         uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
       - name: Setup metrics
         run: npm ci
       - name: Check contributions requirements
