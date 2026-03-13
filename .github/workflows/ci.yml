@@ -55,6 +55,9 @@ jobs:
           ref: main
       - name: Setup NodeJS
         uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: "npm"
       - name: Setup metrics
         run: npm ci
       - name: Publish rebuild metrics indexes
@@ -259,7 +262,7 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: "npm"
       - name: Setup metrics
         run: npm ci
