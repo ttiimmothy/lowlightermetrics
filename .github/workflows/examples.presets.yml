@@ -13,14 +13,13 @@ jobs:
       contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Setup NodeJS
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
-          node-version: 24
-          cache: "npm"
+          node-version: 20
       - name: Setup metrics
         run: npm ci
       - name: Publish presets examples
