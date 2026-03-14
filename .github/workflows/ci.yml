@@ -265,7 +265,7 @@ jobs:
           node-version: 24
           cache: "npm"
       - name: Setup metrics
-        run: npm ci
+        run: npm ci --verbose --ignore-scripts
       - name: Publish release
         run: node .github/scripts/release.mjs
         env:
