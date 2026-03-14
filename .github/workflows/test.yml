@@ -23,7 +23,7 @@ jobs:
           node-version: 20
           cache: "npm"
       - name: Setup metrics
-        run: npm ci --verbose
+        run: npm ci --verbose --ignore-scripts
       - name: Check contributions requirements
         run: npm run test-contrib
       - name: Run linter
