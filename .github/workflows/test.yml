@@ -20,10 +20,10 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 20
           cache: "npm"
       - name: Setup metrics
-        run: npm ci
+        run: npm ci --verbose
       - name: Check contributions requirements
         run: npm run test-contrib
       - name: Run linter
